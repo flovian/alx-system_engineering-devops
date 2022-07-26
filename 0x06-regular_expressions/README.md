@@ -4,9 +4,9 @@ I learned how to use `regular expressions` using Ruby's Oniguruma library.
 
 ## Tasks :page_with_curl:
 
-* **0. Simply matching Holberton**
-  * [0-simply_match_holberton.rb](./0-simply_match_holberton.rb): Ruby script that
-  matches the regular expression `Holberton`.
+* **0. Simply matching School**
+  * [0-simply_match_school.rb](./0-simply_match_school.rb): Ruby script that
+  matches the regular expression `School`.
 
 * **1. Repetition Token #0**
   * [1-repetition_token_0.rb](./1-repetition_token_0.rb): Ruby script that matches
