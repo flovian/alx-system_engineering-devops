@@ -1,5 +1,7 @@
 # 0x07. Networking basics #
 
+Networking basics i.e `WAN` `LAN` `INTERNET` & `TCP/UDP`
+
 ## Tasks :page_with_curl:
 
 * **0. OSI model**
