@@ -1,0 +1,21 @@
+# Firewall
+
+In this project, I used `ufw` to configure firewalls on my web servers.
+
+## Tasks :page_with_curl:
+
+* **1. Block all incoming traffic but**
+  * [1-block_all_incoming_traffic_but](./1-block_all_incoming_traffic_but): Bash
+  script that installs a `ufw` firewall to block all incoming traffic except for
+  ports `22`, `443` and `80` on a web server.
+  * The requirements below must be applied to web-01 (feel free to do it on lb-01 and web-02, but it won’t be checked)
+ * Configure ufw so that it blocks all incoming traffic, except the following TCP ports
+          * `22` (SSH)
+          * `443` (HTTPS SSL)
+          * `80` (HTTP)
+ * Share the `ufw` commands that you used in your answer file
+
+* **2. Port forwarding**
+  * [100-port_forwarding](./100-port_forwarding): `ufw` configuration file that
+  configures a firewall to redirect port `8080/TCP` to port `80/TCP`.
+
