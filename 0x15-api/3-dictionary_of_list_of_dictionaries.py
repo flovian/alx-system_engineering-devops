@@ -1,30 +1,26 @@
 #!/usr/bin/python3
-'''A script that gathers data from an API and exports it to a JSON file.
-'''
+'''returns information about TODO list progress by employee id.'''
 import json
 import requests
-
-
-API_URL = 'https://jsonplaceholder.typicode.com'
-'''The API's URL.'''
+from sys import argv
 
 
 if __name__ == '__main__':
-    users_res = requests.get('{}/users'.format(API_URL)).json()
-    todos_res = requests.get('{}/todos'.format(API_URL)).json()
-    users_data = {}
-    for user in users_res:
-        id = user.get('id')
-        user_name = user.get('username')
-        todos = list(filter(lambda x: x.get('userId') == id, todos_res))
-        user_data = list(map(
-            lambda x: {
-                'username': user_name,
-                'task': x.get('title'),
-                'completed': x.get('completed')
-            },
-            todos
-        ))
-        users_data['{}'.format(id)] = user_data
-    with open('todo_all_employees.json', 'w') as file:
-        json.dump(users_data, file)
+    data = requests.get('https://jsonplaceholder.typicode.com/todos')
+    data = data.json()
+    users = requests.get('https://jsonplaceholder.typicode.com/users')
+    users = users.json()
+    with open('todo_all_employees.json', 'w', newline='') as f:
+        res = {}
+        for user in users:
+            id = str(user.get('id'))
+            tasks = [i for i in data if i.get('userId') == int(id)]
+            expo = {id: []}
+            l = expo.get(id)
+            for task in tasks:
+                l.append({"task": task.get('title'), "completed": task.
+                          get('completed'), "username": user.get('username')})
+            res.update(expo.copy())
+            expo.clear()
+        f.write(json.dumps(res))
+        f.close()
