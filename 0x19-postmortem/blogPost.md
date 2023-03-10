@@ -1,10 +1,10 @@
 # Postmortem
-The webstack outage on March 8, 2023, was caused by a misconfigured CDN, leading to slow response times and impacting 25% of our user base. The issue was resolved by updating the CDN configuration, and steps will be taken to prevent similar issues in the future through regular checks and monitoring.
+The webstack outage on October 31, 2022, was caused by a misconfigured CDN, leading to slow response times and impacting 25% of our user base. The issue was resolved by updating the CDN configuration, and steps will be taken to prevent similar issues in the future through regular checks and monitoring.
 
 ![Flogging a dead horse](post-mortem-meetings.jpg)
 
 ## Issue Summary
-On March 8, 2023, from 2:00 PM to 4:00 PM EST, our webstack experienced an outage that impacted the user experience. During this time, users reported slow load times and timeouts, affecting approximately 25% of our user base. 
+On October 31, 2022, from 2:00 PM to 4:00 PM EST, our webstack experienced an outage that impacted the user experience. During this time, users reported slow load times and timeouts, affecting approximately 25% of our user base. 
 
 ## Timeline
 
